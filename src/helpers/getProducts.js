@@ -1,7 +1,7 @@
 export const getProducts = async (paginationUrl) => {
 
     const paginationConfig = getPaginationConfig(paginationUrl)
-    const url = `http://localhost:3000/products?${paginationConfig}`;
+    const url = `https://be-walmart-palindromo-deploy-xudt4.ondigitalocean.app/products?${paginationConfig}`;
     const response = await fetch( url ,{
         'mode': 'cors',
         'headers': {
@@ -26,7 +26,7 @@ export const getProducts = async (paginationUrl) => {
 
 export const getProductsQuery = async ( query, paginationUrl ) => { 
     const paginationConfig = getPaginationConfig(paginationUrl)
-    const url = `http://localhost:3000/products/search?query=${ encodeURI( query ) }&${paginationConfig}`;
+    const url = `https://be-walmart-palindromo-deploy-xudt4.ondigitalocean.app/products/search?query=${ encodeURI( query ) }&${paginationConfig}`;
     const response = await fetch( url ,{
         'mode': 'cors',
         'headers': {
